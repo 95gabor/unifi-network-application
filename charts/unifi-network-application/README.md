@@ -43,4 +43,3 @@ A Helm chart for Kubernetes
 | service.type | string | `nil` |  |
 | volumeMounts | list | `[]` |  |
 | volumes | list | `[]` |  |
-
