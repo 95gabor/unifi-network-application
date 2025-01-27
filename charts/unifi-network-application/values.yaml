@@ -82,6 +82,7 @@ mongodb:
   # Volumes and their corresponding mounts for the mongodb deployment
   # Storage for mongodb should be mounted under /data/db
   persistence:
+    enabled: true
     # storageClass: ''
     size: 4Gi
     accessMode: ReadWriteOnce
