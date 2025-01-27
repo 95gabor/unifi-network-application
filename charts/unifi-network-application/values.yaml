@@ -62,24 +62,23 @@ affinity: {}
 mongodb:
   # Image to pull and use. For Arm64 (Raspberry Pi 4 for example), use "arm64v8/mongo"
   image: "mongo"
-  imageTag: "3.6"
+  imageTag: "4.4"
   cacheSizeGB: "0.25"
   # Main database name
   dbname: unifi
   # Stat database name
   dbname_stat: unifi_stat
   # Credentials for "normal" and admin user. Must be set/overridden.
-  username: ""
-  password: ""
-  adminuser: ""
-  adminpassword: ""
+  username: "unifi"
+  password: "replace-me"
+  adminuser: "unifi-admin"
+  adminpassword: "replace-me"
   # Volumes and their corresponding mounts for the mongodb deployment
   # Storage for mongodb should be mounted under /data/db
-  volumes: []
-#    - name: nfs-unifi-db
-#      nfs:
-#        server: 1.2.3.4
-#        path: /path/to/unifi-network/db
-  volumeMounts: []
-#    - name: nfs-unifi-db
-#      mountPath: /data/db
+  volumes:
+    - name: mongo-data
+      emptyDir:
+        sizeLimit: 500Mi
+  volumeMounts:
+    - name: mongo-data
+      mountPath: /data/db/
