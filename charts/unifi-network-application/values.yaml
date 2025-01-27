@@ -54,6 +54,10 @@ volumeMounts: []
 #  - name: nfs-unifi-config
 #    mountPath: /config
 
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
 # Settigns related to the embedded MongoDB instance
 mongodb:
   # Image to pull and use. For Arm64 (Raspberry Pi 4 for example), use "arm64v8/mongo"
