@@ -3,6 +3,21 @@ entries:
   unifi-network-application:
   - apiVersion: v2
     appVersion: 9.0.108
+    created: "2025-01-27T12:53:01.119807092Z"
+    description: A Helm chart for Kubernetes
+    digest: b49b0f0a1134d48322405f62e1ddbd0ca2e76b8407463264efa220f5ea7c9ebd
+    maintainers:
+    - email: bpetrikovics@gmail.com
+      name: Balazs Petrikovics
+    - email: 95gabor@gmail.com
+      name: Gabor Pichner
+    name: unifi-network-application
+    type: application
+    urls:
+    - https://github.com/95gabor/unifi-network-application/releases/download/unifi-network-application-0.3.3/unifi-network-application-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
+    appVersion: 9.0.108
     created: "2025-01-27T12:40:33.189368806Z"
     description: A Helm chart for Kubernetes
     digest: b3906f263500c7c3b9e377b17f35f70be2192dd12ca4f12d3e951296db5c554b
@@ -70,4 +85,4 @@ entries:
     urls:
     - https://github.com/95gabor/unifi-network-application/releases/download/unifi-network-application-0.2.0/unifi-network-application-0.2.0.tgz
     version: 0.2.0
-generated: "2025-01-27T12:40:33.189388473Z"
+generated: "2025-01-27T12:53:01.119834463Z"
