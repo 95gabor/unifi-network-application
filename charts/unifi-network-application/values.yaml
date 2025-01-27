@@ -94,3 +94,6 @@ mongodb:
   additionalVolumeMounts: []
   #    - name: nfs-unifi-db
   #      mountPath: /data/db
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
