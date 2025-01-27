@@ -41,7 +41,7 @@ jobs:
       id: get-image-tag
       run: |
         tag=$(curl -s "https://registry.hub.docker.com/v2/repositories/linuxserver/unifi-network-application/tags?page_size=100" | \
-          jq -r --arg stable_digest "$stable_digest" '.results | map(select(.digest == $stable_digest) | .name) | map(select(test("^[0-9]{4}\\.[0-9]{1,2}\\.[0-9]+$"))) | .[]')
+          jq -r --arg stable_digest "$stable_digest" '.results | map(select(.digest == $stable_digest) | .name) | map(select(test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))) | .[]')
         echo "App stable tag: $tag"
         echo "stable_tag=$tag" >> "$GITHUB_ENV"
 
