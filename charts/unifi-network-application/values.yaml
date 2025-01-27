@@ -42,15 +42,21 @@ resources: {}
   #   memory: 1.5Gi
   #  cpu: 2
 
+persistence:
+  enabled: true
+  # storageClass: ''
+  size: 4Gi
+  accessMode: ReadWriteOnce
+
 # Additional volumes on the output Deployment definition.
-volumes: []
+additionalVolumes: []
 #  - name: nfs-unifi-config
 #    nfs:
 #      server: 1.2.3.4
 #      path: /path/to/unifi-network/config
 # Additional volumeMounts on the output Deployment definition.
 # Mount storage for unifi app config under /config
-volumeMounts: []
+additionalVolumeMounts: []
 #  - name: nfs-unifi-config
 #    mountPath: /config
 
@@ -75,10 +81,15 @@ mongodb:
   adminpassword: "replace-me"
   # Volumes and their corresponding mounts for the mongodb deployment
   # Storage for mongodb should be mounted under /data/db
-  volumes:
-    - name: mongo-data
-      emptyDir:
-        sizeLimit: 500Mi
-  volumeMounts:
-    - name: mongo-data
-      mountPath: /data/db/
+  persistence:
+    # storageClass: ''
+    size: 4Gi
+    accessMode: ReadWriteOnce
+  additionalVolumes: []
+  #    - name: nfs-unifi-db
+  #      nfs:
+  #        server: 1.2.3.4
+  #        path: /path/to/unifi-network/db
+  additionalVolumeMounts: []
+  #    - name: nfs-unifi-db
+  #      mountPath: /data/db

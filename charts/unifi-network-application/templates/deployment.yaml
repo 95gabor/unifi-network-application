@@ -20,7 +20,12 @@ spec:
         - name: {{ include "template.fullname" . }}-mongodb-init-volume
           configMap:
             name: {{ include "template.fullname" . }}-mongodb-init-js
-      {{- with .Values.mongodb.volumes }}
+      {{- if .Values.mongodb.persistence.enabled }}
+        - name: mongo-data
+          persistentVolumeClaim:
+            claimName: {{ include "template.fullname" . }}-mongodb
+      {{- end }}
+      {{- with .Values.mongodb.additionalVolumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
 
@@ -43,7 +48,11 @@ spec:
           volumeMounts:
             - name: {{ include "template.fullname" . }}-mongodb-init-volume
               mountPath: /docker-entrypoint-initdb.d/init-mongo.js
-          {{- with .Values.mongodb.volumeMounts }}
+          {{- if .Values.mongodb.persistence.enabled }}
+            - name: mongo-data
+              mountPath: /data/db/
+          {{- end }}
+          {{- with .Values.mongodb.additionalVolumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
 
@@ -65,8 +74,13 @@ spec:
       labels:
         name: {{ include "template.fullname" . }}-app
     spec:
-      {{- with .Values.volumes }}
       volumes:
+      {{- if .Values.persistence.enabled }}
+        - name: config
+          persistentVolumeClaim:
+            claimName: {{ include "template.fullname" . }}
+      {{- end }}
+      {{- with .Values.additionalVolumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
 
@@ -120,8 +134,12 @@ spec:
               containerPort: 8880
               protocol: TCP
 
-          {{- with .Values.volumeMounts }}
           volumeMounts:
+          {{- if .Values.persistence.enabled }}
+            - name: config
+              mountPath: /config
+          {{- end }}
+          {{- with .Values.additionalVolumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
 
