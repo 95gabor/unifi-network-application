@@ -21,6 +21,8 @@ jobs:
       with:
         python-version: '3.x'
 
+    - uses: gabe565/setup-helm-docs-action@v1
+
     - uses: pre-commit/action@v3.0.1
 
     - name: Install semver CLI
@@ -69,7 +71,6 @@ jobs:
         echo "Updating Chart.yaml with appVersion: ${stable_tag} chartVersion: ${new_version}"
         yq eval ".appVersion = \"$stable_tag\" | .version = \"$new_version\"" -i "$src_file"
 
-    - uses: gabe565/setup-helm-docs-action@v1
     - run: helm-docs
 
     - name: Create Pull Request
