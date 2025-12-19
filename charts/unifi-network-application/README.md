@@ -34,6 +34,7 @@ A Helm chart for Kubernetes
 | mongodb.affinity | object | `{}` |  |
 | mongodb.cacheSizeGB | string | `"0.25"` |  |
 | mongodb.dbname | string | `"unifi"` |  |
+| mongodb.dbname_audit | string | `"unifi_audit"` |  |
 | mongodb.dbname_stat | string | `"unifi_stat"` |  |
 | mongodb.image | string | `"mongo"` |  |
 | mongodb.imageTag | string | `"4.4"` |  |

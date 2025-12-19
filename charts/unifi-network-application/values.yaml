@@ -76,6 +76,8 @@ mongodb:
   dbname: unifi
   # Stat database name
   dbname_stat: unifi_stat
+  # Audit database name
+  dbname_audit: unifi_audit
   # Credentials for "normal" and admin user. Must be set/overridden.
   username: "unifi"
   password: "replace-me"
