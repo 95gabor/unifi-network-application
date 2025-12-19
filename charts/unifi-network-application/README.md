@@ -1,6 +1,6 @@
 # unifi-network-application
 
-![Version: 0.4.1](https://img.shields.io/badge/Version-0.4.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.0.162](https://img.shields.io/badge/AppVersion-10.0.162-informational?style=flat-square)
+![Version: 0.4.2](https://img.shields.io/badge/Version-0.4.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.0.162](https://img.shields.io/badge/AppVersion-10.0.162-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -34,6 +34,7 @@ A Helm chart for Kubernetes
 | mongodb.affinity | object | `{}` |  |
 | mongodb.cacheSizeGB | string | `"0.25"` |  |
 | mongodb.dbname | string | `"unifi"` |  |
+| mongodb.dbname_audit | string | `"unifi_audit"` |  |
 | mongodb.dbname_stat | string | `"unifi_stat"` |  |
 | mongodb.image | string | `"mongo"` |  |
 | mongodb.imageTag | string | `"4.4"` |  |
