@@ -48,6 +48,7 @@ spec:
           volumeMounts:
             - name: {{ include "template.fullname" . }}-mongodb-init-volume
               mountPath: /docker-entrypoint-initdb.d/init-mongo.js
+              subPath: init-mongo.js
           {{- if .Values.mongodb.persistence.enabled }}
             - name: mongo-data
               mountPath: /data/db/
