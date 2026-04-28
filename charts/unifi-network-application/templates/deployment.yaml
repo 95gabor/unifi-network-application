@@ -111,7 +111,7 @@ spec:
       dnsConfig:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      dnsPolicy: {{ .Values.dnsPolicy }}
+      dnsPolicy: {{ .Values.dnsPolicy | default "ClusterFirst" }}
 
       containers:
         - name: {{ include "template.fullname" . }}-app
