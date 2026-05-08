@@ -1,6 +1,6 @@
 # unifi-network-application
 
-![Version: 0.4.6](https://img.shields.io/badge/Version-0.4.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.3.55](https://img.shields.io/badge/AppVersion-10.3.55-informational?style=flat-square)
+![Version: 0.4.7](https://img.shields.io/badge/Version-0.4.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.3.58](https://img.shields.io/badge/AppVersion-10.3.58-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
