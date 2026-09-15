@@ -2,8 +2,8 @@ apiVersion: v2
 name: unifi-network-application
 description: A Helm chart for Kubernetes
 type: application
-version: "0.4.10"
-appVersion: "10.6.101"
+version: "0.4.11"
+appVersion: "10.6.106"
 maintainers:
   - name: Balazs Petrikovics
     email: bpetrikovics@gmail.com
