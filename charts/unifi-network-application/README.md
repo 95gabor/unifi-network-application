@@ -1,6 +1,6 @@
 # unifi-network-application
 
-![Version: 0.4.11](https://img.shields.io/badge/Version-0.4.11-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.6.106](https://img.shields.io/badge/AppVersion-10.6.106-informational?style=flat-square)
+![Version: 0.4.12](https://img.shields.io/badge/Version-0.4.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.6.106](https://img.shields.io/badge/AppVersion-10.6.106-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -37,7 +37,7 @@ A Helm chart for Kubernetes
 | mongodb.dbname_audit | string | `"unifi_audit"` |  |
 | mongodb.dbname_stat | string | `"unifi_stat"` |  |
 | mongodb.image | string | `"mongo"` |  |
-| mongodb.imageTag | string | `"4.4"` |  |
+| mongodb.imageTag | string | `"4.4.30@sha256:4be76f674fc4b27859816811b8baa3c51830eb1dbf4ca81a51e26b79edd662ef"` |  |
 | mongodb.nodeSelector | object | `{}` |  |
 | mongodb.password | string | `"replace-me"` |  |
 | mongodb.persistence.accessMode | string | `"ReadWriteOnce"` |  |

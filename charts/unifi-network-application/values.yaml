@@ -70,7 +70,7 @@ affinity: {}
 mongodb:
   # Image to pull and use. For Arm64 (Raspberry Pi 4 for example), use "arm64v8/mongo"
   image: "mongo"
-  imageTag: "4.4"
+  imageTag: "4.4.30@sha256:4be76f674fc4b27859816811b8baa3c51830eb1dbf4ca81a51e26b79edd662ef"
   cacheSizeGB: "0.25"
   # Main database name
   dbname: unifi
