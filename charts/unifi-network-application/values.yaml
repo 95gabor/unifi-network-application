@@ -65,6 +65,9 @@ additionalVolumeMounts: []
 nodeSelector: {}
 tolerations: []
 affinity: {}
+hostNetwork: false
+dnsPolicy: ClusterFirst
+dnsConfig: {}
 
 # Settigns related to the embedded MongoDB instance
 mongodb:
