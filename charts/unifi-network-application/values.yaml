@@ -9,6 +9,9 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
+  # Multi-arch (OCI index) digest of the appVersion image. Only applied when `tag` is empty,
+  # so a custom tag is never combined with a mismatching digest. Set to "" to disable.
+  digest: "sha256:f782b39e005d4c104b2cfa3185594ce93b3c9bd4b0622cc6559d417844d2d037"
 
 imagePullSecrets: []
 
