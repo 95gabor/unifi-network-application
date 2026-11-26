@@ -11,7 +11,7 @@ image:
   tag: ""
   # Multi-arch (OCI index) digest of the appVersion image. Only applied when `tag` is empty,
   # so a custom tag is never combined with a mismatching digest. Set to "" to disable.
-  digest: "sha256:f782b39e005d4c104b2cfa3185594ce93b3c9bd4b0622cc6559d417844d2d037"
+  digest: "sha256:31d2bc6f7df15fd737d7995e3907bf24e106e8b55deae22ad7bdea183c9b2e8b"
 
 imagePullSecrets: []
 
