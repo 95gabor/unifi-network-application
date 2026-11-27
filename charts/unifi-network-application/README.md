@@ -1,6 +1,6 @@
 # unifi-network-application
 
-![Version: 0.5.0](https://img.shields.io/badge/Version-0.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.6.109](https://img.shields.io/badge/AppVersion-10.6.109-informational?style=flat-square)
+![Version: 0.5.1](https://img.shields.io/badge/Version-0.5.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.6.109](https://img.shields.io/badge/AppVersion-10.6.109-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -19,7 +19,7 @@ A Helm chart for Kubernetes
 | additionalVolumes | list | `[]` |  |
 | affinity | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
-| image.digest | string | `"sha256:f782b39e005d4c104b2cfa3185594ce93b3c9bd4b0622cc6559d417844d2d037"` |  |
+| image.digest | string | `"sha256:31d2bc6f7df15fd737d7995e3907bf24e106e8b55deae22ad7bdea183c9b2e8b"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"linuxserver/unifi-network-application"` |  |
 | image.tag | string | `""` |  |
